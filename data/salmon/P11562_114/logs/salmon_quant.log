@@ -1,0 +1,52 @@
+[2020-03-03 14:08:38.393] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2020-03-03 14:08:38.393] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2020-03-03 14:08:38.393] [jointLog] [info] Usage of --validateMappings implies a default consensus slack of 0.2. Setting consensusSlack to 0.35.
+[2020-03-03 14:08:38.393] [jointLog] [info] parsing read library format
+[2020-03-03 14:08:38.393] [jointLog] [info] There is 1 library.
+[2020-03-03 14:08:38.587] [jointLog] [info] Loading pufferfish index
+[2020-03-03 14:08:38.587] [jointLog] [info] Loading dense pufferfish index.
+[2020-03-03 14:08:39.424] [jointLog] [info] done
+[2020-03-03 14:08:39.424] [jointLog] [info] Index contained 66,360 targets
+[2020-03-03 14:08:40.180] [jointLog] [info] Number of decoys : 0
+[2020-03-03 14:08:42.459] [fileLog] [info] 
+At end of round 0
+==================
+Observed 94177 total fragments (94177 in most recent round)
+
+[2020-03-03 14:08:42.457] [jointLog] [info] Computed 35,028 rich equivalence classes for further processing
+[2020-03-03 14:08:42.457] [jointLog] [info] Counted 75,459 total reads in the equivalence classes 
+[2020-03-03 14:08:42.474] [jointLog] [info] Number of mappings discarded because of alignment score : 48,780
+[2020-03-03 14:08:42.474] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 14,499
+[2020-03-03 14:08:42.474] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 0
+[2020-03-03 14:08:42.474] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 7
+[2020-03-03 14:08:42.487] [jointLog] [warning] Only 75459 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2020-03-03 14:08:42.487] [jointLog] [info] Mapping rate = 80.1247%
+
+[2020-03-03 14:08:42.487] [jointLog] [info] finished quantifyLibrary()
+[2020-03-03 14:08:42.487] [jointLog] [info] Starting optimizer
+[2020-03-03 14:08:42.540] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2020-03-03 14:08:42.549] [jointLog] [info] iteration = 0 | max rel diff. = 111.684
+[2020-03-03 14:08:42.634] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2020-03-03 14:08:50.552] [jointLog] [info] Computed expected counts (for bias correction)
+[2020-03-03 14:08:50.553] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2020-03-03 14:08:51.027] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2020-03-03 14:08:51.531] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2020-03-03 14:08:52.051] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2020-03-03 14:08:52.454] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2020-03-03 14:08:52.943] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2020-03-03 14:08:53.507] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2020-03-03 14:08:54.108] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2020-03-03 14:08:54.743] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2020-03-03 14:08:55.653] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2020-03-03 14:08:56.754] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2020-03-03 14:08:57.240] [jointLog] [info] iteration = 100 | max rel diff. = 0.0149554
+[2020-03-03 14:08:57.500] [jointLog] [info] iteration = 150 | max rel diff. = 0.00170561
+[2020-03-03 14:08:57.507] [jointLog] [info] Finished optimizer
+[2020-03-03 14:08:57.507] [jointLog] [info] writing output 
+
+[2020-03-03 14:08:57.625] [jointLog] [warning] NOTE: Read Lib [[ trimmomatic/P11562_114_S13_L001_subset_sortmerna_trimmomatic_1.fq.gz, trimmomatic/P11562_114_S13_L001_subset_sortmerna_trimmomatic_2.fq.gz]] :
+
+Detected a *potential* strand bias > 1% in an unstranded protocol check the file: salmon/P11562_114_S13_L001_subset_sortmerna_trimmomatic/lib_format_counts.json for details
+

@@ -1,0 +1,13 @@
+{
+    "salmon_version": "1.1.0",
+    "libType": "A",
+    "index": "/home/training/share/Day2/reference/salmon/Pabies1.0-all-phase.gff3.CDSandLTR-TE_salmon-version-1dot1dot0",
+    "mates1": "trimmomatic/P11562_138_S35_L001_subset_sortmerna_trimmomatic_1.fq.gz",
+    "mates2": "trimmomatic/P11562_138_S35_L001_subset_sortmerna_trimmomatic_2.fq.gz",
+    "output": "salmon/P11562_138_S35_L001_subset_sortmerna_trimmomatic",
+    "seqBias": [],
+    "gcBias": [],
+    "validateMappings": [],
+    "threads": "7",
+    "auxDir": "aux_info"
+}

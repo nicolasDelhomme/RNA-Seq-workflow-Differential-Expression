@@ -1,0 +1,51 @@
+[2020-03-03 14:09:01.995] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2020-03-03 14:09:01.995] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2020-03-03 14:09:01.995] [jointLog] [info] Usage of --validateMappings implies a default consensus slack of 0.2. Setting consensusSlack to 0.35.
+[2020-03-03 14:09:01.995] [jointLog] [info] parsing read library format
+[2020-03-03 14:09:01.995] [jointLog] [info] There is 1 library.
+[2020-03-03 14:09:02.183] [jointLog] [info] Loading pufferfish index
+[2020-03-03 14:09:02.184] [jointLog] [info] Loading dense pufferfish index.
+[2020-03-03 14:09:02.940] [jointLog] [info] done
+[2020-03-03 14:09:02.940] [jointLog] [info] Index contained 66,360 targets
+[2020-03-03 14:09:03.685] [jointLog] [info] Number of decoys : 0
+[2020-03-03 14:09:05.987] [fileLog] [info] 
+At end of round 0
+==================
+Observed 93377 total fragments (93377 in most recent round)
+
+[2020-03-03 14:09:05.985] [jointLog] [info] Computed 35,768 rich equivalence classes for further processing
+[2020-03-03 14:09:05.985] [jointLog] [info] Counted 69,245 total reads in the equivalence classes 
+[2020-03-03 14:09:06.000] [jointLog] [info] Number of mappings discarded because of alignment score : 40,049
+[2020-03-03 14:09:06.000] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 16,859
+[2020-03-03 14:09:06.000] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 0
+[2020-03-03 14:09:06.000] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 0
+[2020-03-03 14:09:06.013] [jointLog] [warning] Only 69245 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2020-03-03 14:09:06.013] [jointLog] [info] Mapping rate = 74.1564%
+
+[2020-03-03 14:09:06.013] [jointLog] [info] finished quantifyLibrary()
+[2020-03-03 14:09:06.013] [jointLog] [info] Starting optimizer
+[2020-03-03 14:09:06.069] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2020-03-03 14:09:06.079] [jointLog] [info] iteration = 0 | max rel diff. = 103.087
+[2020-03-03 14:09:06.156] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2020-03-03 14:09:09.497] [jointLog] [info] Computed expected counts (for bias correction)
+[2020-03-03 14:09:09.497] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2020-03-03 14:09:09.758] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2020-03-03 14:09:10.076] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2020-03-03 14:09:10.391] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2020-03-03 14:09:10.661] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2020-03-03 14:09:10.953] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2020-03-03 14:09:11.283] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2020-03-03 14:09:11.570] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2020-03-03 14:09:11.897] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2020-03-03 14:09:12.178] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2020-03-03 14:09:12.551] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2020-03-03 14:09:12.985] [jointLog] [info] iteration = 100 | max rel diff. = 7.86829e-05
+[2020-03-03 14:09:12.991] [jointLog] [info] Finished optimizer
+[2020-03-03 14:09:12.991] [jointLog] [info] writing output 
+
+[2020-03-03 14:09:13.108] [jointLog] [warning] NOTE: Read Lib [[ trimmomatic/P11562_115_S14_L001_subset_sortmerna_trimmomatic_1.fq.gz, trimmomatic/P11562_115_S14_L001_subset_sortmerna_trimmomatic_2.fq.gz]] :
+
+Found no concordant and consistent mappings. If this is a paired-end library, are you sure the reads are properly paired? check the file: salmon/P11562_115_S14_L001_subset_sortmerna_trimmomatic/lib_format_counts.json for details
+
