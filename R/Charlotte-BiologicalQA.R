@@ -7,6 +7,25 @@
 #'    toc: true
 #'    number_sections: true
 #' ---
+#' # Setup
+#' 
+#' Here we load the needed libraries we will need for the analysis and set some graphical parameters.
+#' * Libraries
+suppressPackageStartupMessages({
+  library(DESeq2)
+  library(edgeR)
+  library(here)
+  library(LSD)
+  library(RColorBrewer)
+  library(SummarizedExperiment)
+  library(tidyverse)
+  library(tximport)
+  library(vsn)
+})
+
+#' * Graphics
+pal <- brewer.pal(8,"Dark2")
+
 #' # Introduction
 #' In this tutorial we walk through a gene-level RNA-seq differential expression analysis using Bioconductor packages. 
 #' We start from the gene-vs-sample count matrix, and thus assume that the raw reads have already been quality controlled 
@@ -32,6 +51,7 @@
 #' by typing `citation("pkgName")`, where you would substitute the name of the package for `pkgName`. Citing methods papers
 #'  helps to support and reward the individuals who put time into open source software for genomic data analysis.
 #' 
+#' 
 #' ## Experimental data
 #' 
 #' The data used in this workflow comes from an RNA-seq experiment conducted in _Norway spruce_ investigating
@@ -41,11 +61,10 @@
 #' (**ZE** or **FMG**, zygotic and female megagametophyte, respectively). The rationale for the studies is to compare it to the
 #' process used by the forestry industry, called _somatic embryogenesis_ that is used to regenerate an embryo from a somatic tissue.
 #' 
+#' 
+#' 
 #' We start by setting the path to the folder containing the data that will be used in the workflow. 
-datadir <- "/home/ubuntu/raw_data/exploratoryDataAnalysis"
-#' ```{r dir,echo=FALSE}
-#' datadir <- "/mnt/picea/home/delhomme/Git/RNA-Seq-workflow-Differential-Expression/data"
-#' ```
+datadir <- here("data")
 
 #' That directory contains gene- and transcript-level quantifications for the samples in this experiment, 
 #' as well as a metadata table indicating the identity of the samples. All analyses are based on the Norway spruce reference genome (v1.0) 
@@ -63,24 +82,6 @@ datadir <- "/home/ubuntu/raw_data/exploratoryDataAnalysis"
 #' We want to visualize the relationships between the samples (within and across the treatment), and then we want to perform statistical
 #'  tests to find which genes are changing their expression due to treatment.
 #' 
-#' # Setup
-#' 
-#' Here we load the needed libraries we will need for the analysis and set some graphical parameters.
-#' * Libraries
-suppressPackageStartupMessages({
-  library(DESeq2)
-  library(edgeR)
-  library(LSD)
-  library(RColorBrewer)
-  library(SummarizedExperiment)
-  library(tidyverse)
-  library(tximport)
-  library(vsn)
-})
-
-#' * Graphics
-pal <- brewer.pal(8,"Dark2")
-
 #' # Reading the metadata
 #' 
 #' First, we will read the metadata for the experiment. The two annotations of primary interest for this tutorial is `Tissue`, which 
